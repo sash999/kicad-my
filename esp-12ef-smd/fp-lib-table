@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name ht7333-a)(type KiCad)(uri "/home/sasha/Kicad projects/Libraries/ht7333-a/ht7333-a.pretty")(options "")(descr ""))
+  (lib (name ESP8266)(type KiCad)(uri ${ESPLIB}/ESP8266.pretty)(options "")(descr ""))
+)

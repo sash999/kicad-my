@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name AlBalLib)(type Legacy)(uri "/home/sasha/Kicad projects/Libraries/AlBalLib.lib")(options "")(descr ""))
+  (lib (name ESP8266)(type Legacy)(uri ${ESPLIB}/ESP8266.lib)(options "")(descr ""))
+  (lib (name ht7333-a)(type Legacy)(uri "/home/sasha/Kicad projects/Libraries/ht7333-a/ht7333-a.lib")(options "")(descr ""))
+)
