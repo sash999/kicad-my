@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:esp-12ef-smd-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -104,18 +105,14 @@ $EndComp
 $Comp
 L AlBalLib:USB-TTL J2
 U 1 1 5C5CFE61
-P 7850 3300
-F 0 "J2" H 8228 3051 50  0000 L CNN
-F 1 "USB-TTL" H 8228 2960 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 7850 3300 50  0001 C CNN
-F 3 "" H 7850 3300 50  0001 C CNN
-	1    7850 3300
+P 8000 2850
+F 0 "J2" H 8378 2601 50  0000 L CNN
+F 1 "USB-TTL" H 8378 2510 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 8000 2850 50  0001 C CNN
+F 3 "" H 8000 2850 50  0001 C CNN
+	1    8000 2850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7850 3350 7850 2400
-Wire Wire Line
-	7850 2400 7800 2400
 $Comp
 L Device:R R8
 U 1 1 5C5D2E9B
@@ -148,10 +145,7 @@ Connection ~ 7400 2400
 Wire Wire Line
 	7400 2400 6900 2400
 Wire Wire Line
-	7400 2850 7400 3750
-Connection ~ 7400 3750
-Wire Wire Line
-	7400 3750 7850 3750
+	7400 2850 7400 3550
 Wire Wire Line
 	6900 2850 6900 3850
 Wire Wire Line
@@ -162,17 +156,7 @@ Connection ~ 6900 2400
 Wire Wire Line
 	6900 2400 4550 2400
 Wire Wire Line
-	6550 3450 7500 3450
-Wire Wire Line
-	7500 3450 7500 3650
-Wire Wire Line
-	7500 3650 7850 3650
-Wire Wire Line
 	6550 3350 7600 3350
-Wire Wire Line
-	7600 3350 7600 3550
-Wire Wire Line
-	7600 3550 7850 3550
 Wire Wire Line
 	4550 2400 4550 2550
 Connection ~ 4550 2400
@@ -203,13 +187,8 @@ Wire Wire Line
 Connection ~ 6550 4800
 NoConn ~ 5400 4550
 NoConn ~ 5500 4550
-NoConn ~ 5600 4550
-NoConn ~ 5700 4550
 NoConn ~ 5800 4550
 NoConn ~ 5900 4550
-NoConn ~ 4750 3750
-NoConn ~ 4750 3850
-NoConn ~ 4750 3950
 $Comp
 L ht7333-a:HT7333-A L1
 U 1 1 5C5DCC89
@@ -313,12 +292,6 @@ Wire Wire Line
 	2150 4800 2350 4800
 Connection ~ 2700 4800
 Wire Wire Line
-	7850 3450 7700 3450
-Wire Wire Line
-	7700 3450 7700 3000
-Wire Wire Line
-	7700 3000 4750 3000
-Wire Wire Line
 	4750 3000 4750 3350
 Connection ~ 4750 3350
 $Comp
@@ -354,44 +327,7 @@ F 3 "~" H 4750 4800 50  0001 C CNN
 	1    4750 4800
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	6900 4800 7350 4800
-Wire Wire Line
-	7350 4800 7350 4250
-Wire Wire Line
-	7350 3850 7850 3850
 Connection ~ 6900 4800
-Wire Wire Line
-	7800 2400 7800 4150
-Wire Wire Line
-	7800 4150 7850 4150
-Connection ~ 7800 2400
-Wire Wire Line
-	7800 2400 7400 2400
-Wire Wire Line
-	7850 4250 7350 4250
-Connection ~ 7350 4250
-Wire Wire Line
-	7350 4250 7350 3850
-Text GLabel 6550 3550 2    50   Input ~ 0
-SCL
-Text GLabel 6550 3650 2    50   Input ~ 0
-SDA
-Text GLabel 7850 4350 0    50   Input ~ 0
-SCL
-Text GLabel 7850 4450 0    50   Input ~ 0
-SDA
-$Comp
-L AlBalLib:BME280_CONNECTOR J3
-U 1 1 5C5C841E
-P 7900 4100
-F 0 "J3" H 8227 3951 50  0000 L CNN
-F 1 "BME280_CONNECTOR" H 8227 3860 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 7900 4100 50  0001 C CNN
-F 3 "" H 7900 4100 50  0001 C CNN
-	1    7900 4100
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R1
 U 1 1 5C5C8A64
@@ -433,4 +369,116 @@ Wire Wire Line
 Connection ~ 2350 3450
 Wire Wire Line
 	2350 3450 2350 3750
+Text GLabel 4750 3750 0    50   Input ~ 0
+GPIO14
+Text GLabel 4750 3850 0    50   Input ~ 0
+GPIO12
+Text GLabel 4750 3950 0    50   Input ~ 0
+GPIO13
+Text GLabel 6550 3550 2    50   Input ~ 0
+GPIO5
+Text GLabel 6550 3650 2    50   Input ~ 0
+GPIO4
+Text GLabel 5550 4700 0    50   Input ~ 0
+GPIO9
+Text GLabel 5750 4700 2    50   Input ~ 0
+GPIO10
+Wire Wire Line
+	5600 4550 5600 4700
+Wire Wire Line
+	5600 4700 5550 4700
+Wire Wire Line
+	5700 4550 5700 4700
+Wire Wire Line
+	5700 4700 5750 4700
+Wire Wire Line
+	4750 3000 8000 3000
+Wire Wire Line
+	8000 3100 7600 3100
+Wire Wire Line
+	7600 3100 7600 3350
+Wire Wire Line
+	7700 3450 7700 3200
+Wire Wire Line
+	7700 3200 8000 3200
+Wire Wire Line
+	6550 3450 7700 3450
+Wire Wire Line
+	6900 4800 7550 4800
+Wire Wire Line
+	7400 3550 7850 3550
+Wire Wire Line
+	7850 3550 7850 3300
+Wire Wire Line
+	7850 3300 8000 3300
+Connection ~ 7400 3550
+Wire Wire Line
+	7400 3550 7400 3750
+Wire Wire Line
+	8000 2900 8000 2400
+Wire Wire Line
+	7400 2400 8000 2400
+Wire Wire Line
+	8000 3400 8000 3700
+Wire Wire Line
+	8000 3700 7550 3700
+Wire Wire Line
+	7550 3700 7550 3950
+Text GLabel 8900 3550 0    50   Input ~ 0
+GPIO14
+Text GLabel 8900 3750 0    50   Input ~ 0
+GPIO12
+Text GLabel 8900 3650 0    50   Input ~ 0
+GPIO13
+Text GLabel 8900 4400 0    50   Input ~ 0
+GPIO9
+Text GLabel 8900 3850 0    50   Input ~ 0
+GPIO10
+Text GLabel 8900 4500 0    50   Input ~ 0
+GPIO5
+Text GLabel 8900 4600 0    50   Input ~ 0
+GPIO4
+$Comp
+L AlBalLib:6PIN-WITH-POWER J3
+U 1 1 5CA38485
+P 8900 3400
+F 0 "J3" H 9277 3151 50  0000 L CNN
+F 1 "6PIN-WITH-POWER" H 9277 3060 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 8900 3400 50  0001 C CNN
+F 3 "" H 8900 3400 50  0001 C CNN
+	1    8900 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L AlBalLib:6PIN-WITH-POWER J4
+U 1 1 5CA38513
+P 8900 4250
+F 0 "J4" H 9277 4001 50  0000 L CNN
+F 1 "6PIN-WITH-POWER" H 9277 3910 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 8900 4250 50  0001 C CNN
+F 3 "" H 8900 4250 50  0001 C CNN
+	1    8900 4250
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8900 4700
+Wire Wire Line
+	8900 4800 7550 4800
+Connection ~ 7550 4800
+Wire Wire Line
+	8900 3950 7550 3950
+Connection ~ 7550 3950
+Wire Wire Line
+	7550 3950 7550 4800
+Wire Wire Line
+	8000 2400 8900 2400
+Connection ~ 8000 2400
+Wire Wire Line
+	8900 2400 8900 3450
+Wire Wire Line
+	8900 3450 8400 3450
+Wire Wire Line
+	8400 3450 8400 4300
+Wire Wire Line
+	8400 4300 8900 4300
+Connection ~ 8900 3450
 $EndSCHEMATC
