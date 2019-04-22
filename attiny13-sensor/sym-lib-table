@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name AlBalLib)(type Legacy)(uri "/home/sasha/Kicad projects/Libraries/AlBalLib.lib")(options "")(descr ""))
+)
